@@ -1,0 +1,20 @@
+{
+  "name": "stop_drop_buy",
+  "version": "1.0.0",
+  "description": "E-commerce for your perusement and purchase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JBenKaplan/Stop_Drop_Buy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JBenKaplan/Stop_Drop_Buy/issues"
+  },
+  "homepage": "https://github.com/JBenKaplan/Stop_Drop_Buy#readme"
+}
