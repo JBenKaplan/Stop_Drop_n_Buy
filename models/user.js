@@ -6,7 +6,7 @@ const User = new Schema(
     email: { type: String, required: true },
     passwordDigest: { type: String, required: false },
     shippingAddress: { type: String, required: true },
-    cart: { type: Schema.Types.ObjectId, ref: 'Cart' }
+    cart_id: { type: Schema.Types.ObjectId, ref: 'Cart' }
   },
   { timestamps: true }
 )
