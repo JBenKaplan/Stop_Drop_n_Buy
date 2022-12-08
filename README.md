@@ -28,12 +28,11 @@ Stop into the shop, take a look around, find some items you'd like to purchase, 
   - HTML
   - CSS
   - JS
-  - Vue
   - Node JS
+  - Vue
 - Backend Development
-  - MongoDB
-  - Sequelize
   - Express
+  - MongoDB
 
 ---
 
