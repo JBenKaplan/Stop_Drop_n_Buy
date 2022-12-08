@@ -1,5 +1,5 @@
 const db = require('../db')
-const { Product, Cart } = require('../models')
+const { Product } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -50,8 +50,8 @@ const main = async () => {
     }
   ]
 
-  await Cart.insertMany(products)
-  console.log('Created carts!')
+  await Product.insertMany(products)
+  console.log('Created products!')
 }
 
 const run = async () => {
