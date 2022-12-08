@@ -42,3 +42,5 @@ Stop into the shop, take a look around, find some items you'd like to purchase, 
 ---
 
 ## Credits
+
+[Icon8](https://icons8.com/) - icons
