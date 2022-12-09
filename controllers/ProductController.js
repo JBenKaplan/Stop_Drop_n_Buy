@@ -65,10 +65,20 @@ const removeProductFromCart = async (req, res) => {
   }
 }
 
+const deleteProduct = async (req, res) => {
+  try {
+    const product = await Product.findByIdAndRemove(req.params.product_id)
+    res.send(product)
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
 module.exports = {
   getAllProducts,
   createProduct,
   addProductToCart,
   updateProduct,
+  deleteProduct,
   removeProductFromCart
 }

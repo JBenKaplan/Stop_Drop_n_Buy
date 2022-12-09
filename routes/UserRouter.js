@@ -13,4 +13,6 @@ router.get(
   controllers.getAllUsers
 )
 
+router.put('/update', controllers.updateUser)
+
 module.exports = router
