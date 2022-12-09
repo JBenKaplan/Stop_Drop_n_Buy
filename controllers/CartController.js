@@ -34,8 +34,22 @@ const createCart = async (req, res) => {
   }
 }
 
+const deleteCart = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Cart.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Cart deleted')
+    }
+    throw new Error('Cart not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   getAllCarts,
   getCartById,
-  createCart
+  createCart,
+  deleteCart
 }
