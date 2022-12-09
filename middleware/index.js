@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const { model } = require('mongoose')
 require('dotenv').config()
 
 const SALT_ROUNDS = parseInt(process.env.SALT_ROUNDS)
@@ -27,9 +28,9 @@ const verifyToken = (req, res, next) => {
     if (payload) {
       return next()
     }
-    res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
-  } catch (error) {
-    res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
+    res.status(404).send({ status: 'Error', msg: 'Unauthorized' })
+  } catch (e) {
+    res.status(401).send({ status: 'Error', msg: 'Unathorized' })
   }
 }
 
@@ -40,7 +41,7 @@ const stripToken = (req, res, next) => {
       res.locals.token = token
       return next()
     }
-  } catch (error) {
+  } catch (e) {
     res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
   }
 }

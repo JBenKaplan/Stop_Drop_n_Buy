@@ -28,6 +28,12 @@ const getAllCarts = async (req, res) => {
   }
 }
 
+// Post methods
+// const createUser = async (req, res) => {
+//   try {
+//   } catch (error) {}
+// }
+
 module.exports = {
   getAllUsers,
   getAllProducts,

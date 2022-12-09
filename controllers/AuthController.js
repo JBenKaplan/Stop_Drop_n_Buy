@@ -1,5 +1,6 @@
 const { User } = require('../models')
 const middleware = require('../middleware')
+
 const Login = async (req, res) => {
   try {
   } catch (error) {
@@ -9,10 +10,11 @@ const Login = async (req, res) => {
 
 const Register = async (req, res) => {
   try {
-    const { email, password, name, username } = req.body
+    const { name, username, password, email } = req.body
     let passwordDigest = await middleware.hashPassword(password)
-    const user = await User.insertOne({ name, username, passwordDigest, email })
-    res.send(user)
+    const user = new User({ name, username, passwordDigest, email })
+    await user.save()
+    return res.status(201).json({ user })
   } catch (error) {
     throw error
   }
