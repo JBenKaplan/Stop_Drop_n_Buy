@@ -37,6 +37,23 @@ const addProductToCart = async (req, res) => {
   }
 }
 
+const updateProduct = async (req, res) => {
+  try {
+    let productId = req.params.product_id
+    let { name, description, price, category, quantity } = req.body
+    let updatedProduct = await Product.findByIdAndUpdate(productId, {
+      name,
+      description,
+      price,
+      category,
+      quantity
+    })
+    res.send(updatedProduct)
+  } catch (error) {
+    throw error
+  }
+}
+
 const removeProductFromCart = async (req, res) => {
   try {
     const cart = await Cart.findByIdAndUpdate(req.params.id, {
@@ -52,5 +69,6 @@ module.exports = {
   getAllProducts,
   createProduct,
   addProductToCart,
+  updateProduct,
   removeProductFromCart
 }

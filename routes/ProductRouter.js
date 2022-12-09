@@ -9,5 +9,6 @@ router.get('/all', controllers.getAllProducts)
 router.post('/create', controllers.createProduct)
 
 router.put('/cart/:id/:product_id', controllers.addProductToCart)
+router.put('/update/:product_id', controllers.updateProduct)
 
 module.exports = router
