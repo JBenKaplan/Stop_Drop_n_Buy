@@ -3,7 +3,7 @@ const controllers = require('../controllers/AuthController')
 
 const router = Router()
 
-router.get('/', (req, res) => {
+router.get('/auth', (req, res) => {
   res.send('this is the auth router')
 })
 

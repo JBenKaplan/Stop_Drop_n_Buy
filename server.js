@@ -1,6 +1,8 @@
 const express = require('express')
 const user = require('./routes/UserRouter')
 const auth = require('./routes/AuthRouter')
+const cart = require('./routes/CartRouter')
+const product = require('./routes/ProductRouter')
 const db = require('./db')
 const cors = require('cors')
 // require() imports and middleware here ^ ///////
@@ -17,6 +19,8 @@ app.use(express.static(`${__dirname}/client/build`))
 
 app.use('/user', user)
 app.use('/auth', auth)
+app.use('/cart', cart)
+app.use('/product', product)
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
