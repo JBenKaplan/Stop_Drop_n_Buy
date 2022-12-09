@@ -4,6 +4,7 @@ const router = Router()
 
 router.get('/api', (req, res) => res.send('This is root!'))
 
-router.get('/products')
+router.get('/all', controllers.getAllProducts)
+router.put('/cart/:id/:product_id', controllers.addProductToCart)
 
 module.exports = router

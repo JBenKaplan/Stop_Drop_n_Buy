@@ -17,10 +17,10 @@ app.use(express.static(`${__dirname}/client/build`))
 
 // app.use() middleware here ^ ///////////////////
 
-app.use('/user', user)
+app.use('/users', user)
 app.use('/auth', auth)
-app.use('/cart', cart)
-app.use('/product', product)
+app.use('/carts', cart)
+app.use('/products', product)
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 

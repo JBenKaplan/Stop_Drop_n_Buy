@@ -5,7 +5,7 @@ const router = Router()
 
 router.get('/api', (req, res) => res.send('This is root!'))
 
-router.get('/users', controllers.getAllUsers)
+router.get('/all', controllers.getAllUsers)
 router.get(
   '/cart',
   middleware.stripToken,

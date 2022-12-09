@@ -9,6 +9,18 @@ const getAllProducts = async (req, res) => {
   }
 }
 
+const addProductToCart = async (req, res) => {
+  try {
+    const cart = await Cart.findByIdAndUpdate(req.params.id, {
+      $push: { products: req.params.product_id }
+    })
+    res.status(200).send(cart)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
-  getAllProducts
+  getAllProducts,
+  addProductToCart
 }
