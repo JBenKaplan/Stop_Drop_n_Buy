@@ -11,6 +11,11 @@ const getAllProducts = async (req, res) => {
 
 const addProductToCart = async (req, res) => {
   try {
+    // if (product_id in products) {
+    // add one to a counter in the cart for item
+    // } else {
+    // push new item
+    // }
     const cart = await Cart.findByIdAndUpdate(req.params.id, {
       $push: { products: req.params.product_id }
     })
@@ -20,7 +25,19 @@ const addProductToCart = async (req, res) => {
   }
 }
 
+const removeProductFromCart = async (req, res) => {
+  try {
+    const cart = await Cart.findByIdAndUpdate(req.params.id, {
+      $pull: { products: req.params.product_id }
+    })
+    return res.status(202).send(cart)
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
 module.exports = {
   getAllProducts,
-  addProductToCart
+  addProductToCart,
+  removeProductFromCart
 }
