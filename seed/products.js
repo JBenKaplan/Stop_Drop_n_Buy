@@ -9,13 +9,15 @@ const main = async () => {
       name: 'Apple AirPods',
       description: 'https://www.apple.com/airpods',
       price: '250',
-      category: 'tech'
+      category: 'tech',
+      quantity: 10
     },
     {
       name: 'Apple iPhone Pro',
       description: 'https://www.apple.com/iphone-11-pro',
       price: '1000',
-      category: 'tech'
+      category: 'tech',
+      quantity: 10
     },
     {
       name: 'Apple Watch',
@@ -27,26 +29,30 @@ const main = async () => {
       name: 'Vespa Primavera',
       description: 'https://www.vespa.com/us_EN/vespa-models/primavera.html',
       price: '3000',
-      category: 'transportation'
+      category: 'transportation',
+      quantity: 10
     },
     {
       name: 'New Balance 574 Core',
       description: 'https://www.newbalance.com/pd/574-core/ML574-EG.html',
       price: '84',
-      category: 'shoes'
+      category: 'shoes',
+      quantity: 10
     },
     {
       name: 'Tribe Messenger Bike 004',
       description:
         'https://tribebicycles.com/collections/messenger-series/products/mess-004-tx',
       price: '675',
-      category: 'transportation'
+      category: 'transportation',
+      quantity: 10
     },
     {
       name: 'Stumptown Hair Bender Coffee',
       description: 'https://www.stumptowncoffee.com/products/hair-bender',
       price: '17',
-      category: 'kitchen'
+      category: 'kitchen',
+      quantity: 10
     }
   ]
 
