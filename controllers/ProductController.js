@@ -9,6 +9,18 @@ const getAllProducts = async (req, res) => {
   }
 }
 
+const createProduct = async (req, res) => {
+  try {
+    const product = await new Product(req.body)
+    await product.save()
+    return res.status(201).json({
+      product
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
 const addProductToCart = async (req, res) => {
   try {
     // if (product_id in products) {
@@ -38,6 +50,7 @@ const removeProductFromCart = async (req, res) => {
 
 module.exports = {
   getAllProducts,
+  createProduct,
   addProductToCart,
   removeProductFromCart
 }
