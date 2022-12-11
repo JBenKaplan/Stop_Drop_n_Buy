@@ -30,7 +30,10 @@ import axios from 'axios'
 export default {
   name: 'HomePage',
   data: () => ({
-    products: []
+    products: [],
+    searchResults: [],
+    searchQuery: '',
+    searched: false
   }),
   mounted() {
     this.getProducts()
