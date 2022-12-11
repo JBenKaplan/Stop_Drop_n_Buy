@@ -5,6 +5,7 @@ const router = Router()
 router.get('/api', (req, res) => res.send('This is root!'))
 
 router.get('/all', controllers.getAllProducts)
+router.get('/:product_id', controllers.getProductById)
 
 router.post('/create', controllers.createProduct)
 

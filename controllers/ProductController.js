@@ -21,6 +21,13 @@ const createProduct = async (req, res) => {
   }
 }
 
+const getProductById = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.product_id)
+    return res.status(201).json({ product })
+  } catch (error) {}
+}
+
 const addProductToCart = async (req, res) => {
   try {
     // if (product_id in products) {
@@ -77,6 +84,7 @@ const deleteProduct = async (req, res) => {
 module.exports = {
   getAllProducts,
   createProduct,
+  getProductById,
   addProductToCart,
   updateProduct,
   deleteProduct,
