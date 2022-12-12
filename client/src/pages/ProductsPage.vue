@@ -1,13 +1,10 @@
 <template>
-  <div>
-    <div :key="product.id" v-for="product in products" class="productsPage">
+  <div class="productsPage">
+    <div :key="product.id" v-for="product in products" class="product-wrapper">
       <div class="productList" @click="selectProduct(product._id)">
         <ProductCard @click="selectProduct(product._id)" :name="product.name" :image="product.icon"
           :background="product.splash" :details="product.description" :price="product.price"
           :quantity="product.quantity" />
-        <p class="productItem">
-          {{ product.name }}
-        </p>
         <p class="productItem">
           ${{ product.price }}
         </p>

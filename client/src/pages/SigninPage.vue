@@ -31,8 +31,7 @@ export default {
   methods: {
     async getCart() {
       let res = await axios.get(`http://localhost:3001/carts/6393611b08906d51c5716e85`)
-      console.log(res.data.cart.products)
-      this.cart = res.data.cart.products
+      return res
     },
     handleChange(e) {
       this.target.value = e.target.value

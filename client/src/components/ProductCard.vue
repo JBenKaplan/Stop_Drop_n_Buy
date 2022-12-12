@@ -1,10 +1,10 @@
 <template>
   <div class="card">
     <div class="image-wrapper">
-      <img :src="image" alt="genre-image" />
+      <img :src="image" alt="product-image" class="product-image" />
     </div>
     <div class="info-wrapper flex-col">
-      <h2>{{ name }}</h2>
+      <h2 class="product-name">{{ name }}</h2>
     </div>
   </div>
 </template>

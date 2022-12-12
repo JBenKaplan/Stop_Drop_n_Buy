@@ -21,7 +21,6 @@
 <script>
 // import axios from 'axios'
 
-import axios from 'axios';
 
 export default {
   name: 'CartPage',
@@ -38,8 +37,8 @@ export default {
   },
   methods: {
     async registerUser() {
-      let user = await axios.put('http://localhost:3001/auth/register')
-      console.log(user)
+
+      // await RegisterUser(this.username, this.email, this.password)
     },
     handleChange(e) {
       this.target.value = e.target.value

@@ -19,7 +19,8 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios"
+// import Client from '@/services/api'
 import ProductCard from '@/components/ProductCard.vue'
 
 export default {

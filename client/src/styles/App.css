@@ -18,11 +18,27 @@ nav {
 /* All Products page */
 .productsPage {
   display: flex;
+  width: 90vw;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  /* border: black 2px solid; */
+}
+.product-wrapper {
+  display: flex;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 10px;
+  height: 20vh;
+  width: 20vw;
+  background: rgba(143, 143, 143, 0.589);
 }
 .productsList {
+  display: flex;
   width: 30vw;
   height: 30vw;
-  border: black 2px solid;
+}
+.product-image {
+  height: 10vh;
 }
 
 /* Product Info */
