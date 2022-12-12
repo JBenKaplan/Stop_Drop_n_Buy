@@ -1,13 +1,4 @@
-.productsPage {
-  display: flex;
-}
-
-.productsList {
-  width: 30vw;
-  height: 30vw;
-  border: black 2px solid;
-}
-
+/* Nav bar */
 nav {
   display: flex;
   justify-content: center;
@@ -17,7 +8,6 @@ nav {
   height: 50px;
   margin: 0 0 20px 0;
 }
-
 .navitem {
   display: flex;
   margin: 0 20px;
@@ -25,7 +15,17 @@ nav {
   width: 20px;
 }
 
-/* Product Info styles */
+/* All Products page */
+.productsPage {
+  display: flex;
+}
+.productsList {
+  width: 30vw;
+  height: 30vw;
+  border: black 2px solid;
+}
+
+/* Product Info */
 .productInfo {
   display: flex;
   align-items: center;
