@@ -4,10 +4,11 @@
         class="navitem" /></router-link>
     <router-link to="/products" class="navitem">Products</router-link>
     <div class="navitem">
-      <img src="../assets/shopping-cart--v1.png" alt="cart" class="navitem" @click="handleClick" />
-      <div className="dropdown-panel {{panelDisplay}}" class="cart-dropdown">
-        <p>Test Hi</p>
-      </div>
+      <router-link to="/cart" class="navitem">
+        <img src="../assets/shopping-cart--v1.png" alt="cart" class="navitem" @click="handleClick" />
+      </router-link>
+      <!-- <div className="dropdown-panel {{panelDisplay}}" class="cart-dropdown">
+      </div> -->
     </div>
   </nav>
 </template>
