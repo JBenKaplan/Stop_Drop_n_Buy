@@ -1,0 +1,44 @@
+.productsPage {
+  display: flex;
+}
+
+.productsList {
+  width: 30vw;
+  height: 30vw;
+  border: black 2px solid;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(128, 128, 128, 0.593);
+  border-radius: 10px;
+  height: 50px;
+  margin: 0 0 20px 0;
+}
+
+.navitem {
+  display: flex;
+  margin: 0 20px;
+  height: 20px;
+  width: 20px;
+}
+
+/* Product Info styles */
+.productInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.backsplash {
+  width: 80vw;
+  border-radius: 20px;
+  height: 70vh;
+}
+button {
+  display: flex;
+  align-items: center;
+  background-color: rgb(144, 190, 255);
+  border-radius: 5px;
+}

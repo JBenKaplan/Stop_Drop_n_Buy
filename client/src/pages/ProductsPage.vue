@@ -48,15 +48,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.productsPage {
-  display: flex;
-}
-
-.productsList {
-  width: 30vw;
-  height: 30vw;
-  border: black 2px solid;
-}
-</style>

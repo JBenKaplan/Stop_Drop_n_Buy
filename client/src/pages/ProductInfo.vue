@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div class="productInfo">
+    <div>
+      <img :src=product.splash alt="backsplash" class="backsplash" />
+    </div>
     <p class="productItem">
       {{ product.name }}
     </p>
@@ -9,8 +12,9 @@
     <p class="productItem">
       {{ product.quantity }} in stock
     </p>
+    <button class="add-to-cart">+<img src="../assets/shopping-cart--v1.png" alt="cart" class="navitem"
+        @click="handleClick" /></button>
   </div>
-
 </template>
 
 <script>
