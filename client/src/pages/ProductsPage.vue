@@ -1,16 +1,30 @@
 <template>
+  <div class="search">
+    <form @submit="getSearchResults" class="search-form">
+      <input :value="searchQuery" @input="handleChange" class="inputBox" />
+      <button>Search</button>
+    </form>
+    <h2 v-if="searched">Search Results</h2>
+    <section class="search-results container-grid">
+      <div :key="product.id" v-for="product in searchResults">
+      </div>
+    </section>
+  </div>
+
   <div class="productsPage">
     <div :key="product.id" v-for="product in products" class="product-wrapper">
       <div class="productList" @click="selectProduct(product._id)">
-        <ProductCard @click="selectProduct(product._id)" :name="product.name" :image="product.icon"
-          :background="product.splash" :details="product.description" :price="product.price"
-          :quantity="product.quantity" />
-        <p class="productItem">
-          ${{ product.price }}
-        </p>
-        <p class="productItem">
-          {{ product.quantity }} in stock
-        </p>
+        <ProductCard @click="selectProduct(product._id)" :image="product.icon" :background="product.splash"
+          :details="product.description" :price="product.price" :quantity="product.quantity" />
+        <div class="product-details">
+          <p class="productItem">
+            ${{ product.price }}
+          </p>
+          <p class="productItem">
+            {{ product.quantity }} in stock
+          </p>
+          <h2>{{ product.name }}</h2>
+        </div>
       </div>
     </div>
   </div>

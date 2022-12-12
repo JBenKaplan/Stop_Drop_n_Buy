@@ -16,6 +16,16 @@ nav {
 }
 
 /* All Products page */
+.search {
+  display: flex;
+  justify-content: center;
+}
+.search-form {
+  display: flex;
+}
+.inputBox {
+  border-radius: 20px;
+}
 .productsPage {
   display: flex;
   width: 90vw;
@@ -34,8 +44,8 @@ nav {
 }
 .productsList {
   display: flex;
-  width: 30vw;
-  height: 30vw;
+  width: 40vw;
+  height: 40vh;
 }
 .product-image {
   height: 10vh;
@@ -56,5 +66,5 @@ button {
   display: flex;
   align-items: center;
   background-color: rgb(144, 190, 255);
-  border-radius: 5px;
+  border-radius: 20px;
 }

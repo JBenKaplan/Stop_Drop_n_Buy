@@ -2,17 +2,8 @@
   <div class="cart">
     <div :key="product.id" v-for="product in cart" class="cartPage">
       <div class="productList" @click="selectProduct(product._id)">
-        <ProductCard :name="product.name" :image="product.icon" :background="product.splash"
-          :details="product.description" :price="product.price" :quantity="product.quantity" />
-        <p class="productItem">
-          {{ product.name }}
-        </p>
-        <p class="productItem">
-          ${{ product.price }}
-        </p>
-        <p class="productItem">
-          {{ product.quantity }} in stock
-        </p>
+        <CartCard :name="product.name" :image="product.icon" :background="product.splash" :details="product.description"
+          :price="product.price" :quantity="product.quantity" :remove="product.id" />
       </div>
     </div>
   </div>
@@ -21,7 +12,7 @@
 <script>
 import axios from "axios"
 // import Client from '@/services/api'
-import ProductCard from '@/components/ProductCard.vue'
+import CartCard from '@/components/CartCard.vue'
 
 export default {
   name: 'CartPage',
@@ -29,7 +20,7 @@ export default {
     cart: []
   }),
   components: {
-    ProductCard
+    CartCard
   },
   mounted() {
     this.getCart()

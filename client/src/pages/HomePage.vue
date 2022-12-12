@@ -1,18 +1,5 @@
 <template>
   <div>
-    <div class="search">
-      <form @submit="getSearchResults">
-        <input :value="searchQuery" @input="handleChange" />
-        <button>Search</button>
-      </form>
-      <h2 v-if="searched">Search Results</h2>
-      <section class="search-results container-grid">
-        <div :key="product.id" v-for="product in searchResults">
-
-        </div>
-      </section>
-    </div>
-
     <div class="products" v-if="!searched">
       <h2>Top Products</h2>
       <section class="container-grid">
