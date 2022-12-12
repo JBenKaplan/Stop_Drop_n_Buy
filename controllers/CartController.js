@@ -12,7 +12,7 @@ const getAllCarts = async (req, res) => {
 const getCartById = async (req, res) => {
   try {
     const { id } = req.params
-    const cart = await Cart.findById(id)
+    const cart = await Cart.findById(id).populate('products')
     if (cart) {
       return res.status(200).json({ cart })
     }

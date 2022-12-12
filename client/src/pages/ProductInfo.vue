@@ -13,7 +13,7 @@
       {{ product.quantity }} in stock
     </p>
     <button class="add-to-cart">+<img src="../assets/shopping-cart--v1.png" alt="cart" class="navitem"
-        @click="handleClick" /></button>
+        @click="addProductToCart" /></button>
   </div>
 </template>
 
@@ -26,13 +26,12 @@ export default {
     product: {},
   }),
   mounted() {
-    this.getProductInfo()
   },
   components: {
   },
   methods: {
-    async getProductInfo() {
-      let res = await axios.get(`http://localhost:3001/products/${this.$route.params.product_id}`)
+    async addProductToCart() {
+      let res = await axios.put(`http://localhost:3001/products/cart/6393611b08906d51c5716e85/${this.$route.params.product_id}`)
       console.log(res.data.product)
       this.product = res.data.product
     },
