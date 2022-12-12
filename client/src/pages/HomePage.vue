@@ -7,17 +7,19 @@
       </form>
       <h2 v-if="searched">Search Results</h2>
       <section class="search-results container-grid">
-        <div :key="game.id" v-for="game in searchResults">
+        <div :key="product.id" v-for="product in searchResults">
 
         </div>
       </section>
     </div>
 
     <div class="products" v-if="!searched">
-      <h2>Genres</h2>
+      <h2>Top Products</h2>
       <section class="container-grid">
         <div :key="product.id" v-for="product in products">
-
+          <div>
+            <ProductCard @click="selectProduct(product._id)" :name="product.name" :image="product.icon" />
+          </div>
         </div>
       </section>
     </div>
@@ -26,6 +28,7 @@
 
 <script>
 import axios from 'axios'
+import ProductCard from '../components/ProductCard.vue'
 
 export default {
   name: 'HomePage',
@@ -39,18 +42,19 @@ export default {
     this.getProducts()
   },
   components: {
+    ProductCard
   },
   methods: {
     async getProducts() {
       let res = await axios.get(`http://localhost:3001/products/all`)
-      console.log(res.data)
-      this.products = res.data
+      console.log(res.data.products)
+      this.products = res.data.products
     },
     handleChange(e) {
       this.searchQuery = e.target.value
     },
-    selectGame(gameId) {
-      this.$router.push(`/details/${gameId}`)
+    selectProduct(product_id) {
+      this.$router.push(`/products/${product_id}`)
     },
     selectGenre(genreId) {
       this.$router.push(`/games/${genreId}`)
@@ -58,3 +62,7 @@ export default {
   }
 }
 </script>
+
+<style>
+
+</style>

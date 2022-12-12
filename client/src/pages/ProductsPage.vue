@@ -2,6 +2,9 @@
   <div>
     <div :key="product.id" v-for="product in products" class="productsPage">
       <div class="productList" @click="selectProduct(product._id)">
+        <ProductCard @click="selectProduct(product._id)" :name="product.name" :image="product.icon"
+          :background="product.splash" :details="product.description" :price="product.price"
+          :quantity="product.quantity" />
         <p class="productItem">
           {{ product.name }}
         </p>
@@ -18,6 +21,7 @@
 
 <script>
 import axios from 'axios'
+import ProductCard from '@/components/ProductCard.vue'
 
 export default {
   name: 'ProductsPage',
@@ -31,6 +35,7 @@ export default {
     this.getProducts()
   },
   components: {
+    ProductCard
   },
   methods: {
     async getProducts() {
