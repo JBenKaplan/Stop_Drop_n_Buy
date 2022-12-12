@@ -3,7 +3,7 @@
     <div :key="product.id" v-for="product in cart" class="cartPage">
       <div class="productList" @click="selectProduct(product._id)">
         <CartCard :name="product.name" :image="product.icon" :background="product.splash" :details="product.description"
-          :price="product.price" :quantity="product.quantity" :remove="product.id" />
+          :price="product.price" :quantity="product.quantity" :productId="product._id" />
       </div>
     </div>
   </div>

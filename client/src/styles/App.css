@@ -28,18 +28,17 @@ nav {
 }
 .productsPage {
   display: flex;
-  width: 90vw;
   margin: 0 auto;
+  width: 90vw;
   flex-wrap: wrap;
-  /* border: black 2px solid; */
 }
 .product-wrapper {
   display: flex;
   border-radius: 10px;
-  margin: 10px auto;
+  margin: 10px 10px;
   padding: 10px;
-  height: 20vh;
-  width: 20vw;
+  height: 30vh;
+  width: 25vw;
   background: rgba(143, 143, 143, 0.589);
 }
 .productsList {
@@ -67,4 +66,8 @@ button {
   align-items: center;
   background-color: rgb(144, 190, 255);
   border-radius: 20px;
+}
+
+img {
+  border-radius: 10px;
 }

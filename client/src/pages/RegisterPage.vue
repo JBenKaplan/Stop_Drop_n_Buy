@@ -20,6 +20,7 @@
 
 <script>
 // import axios from 'axios'
+import { RegisterUser } from '../services/Auth'
 
 
 export default {
@@ -36,9 +37,9 @@ export default {
   mounted() {
   },
   methods: {
-    async registerUser() {
-
-      // await RegisterUser(this.username, this.email, this.password)
+    async registerUser(e) {
+      e.preventDefault()
+      await RegisterUser(this.username, this.email, this.password)
     },
     handleChange(e) {
       this.target.value = e.target.value

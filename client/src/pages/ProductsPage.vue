@@ -16,6 +16,7 @@
       <div class="productList" @click="selectProduct(product._id)">
         <ProductCard @click="selectProduct(product._id)" :image="product.icon" :background="product.splash"
           :details="product.description" :price="product.price" :quantity="product.quantity" />
+        <h2>{{ product.name }}</h2>
         <div class="product-details">
           <p class="productItem">
             ${{ product.price }}
@@ -23,7 +24,7 @@
           <p class="productItem">
             {{ product.quantity }} in stock
           </p>
-          <h2>{{ product.name }}</h2>
+          <button>Add to Cart</button>
         </div>
       </div>
     </div>
