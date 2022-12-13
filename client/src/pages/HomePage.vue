@@ -43,9 +43,6 @@ export default {
     selectProduct(product_id) {
       this.$router.push(`/products/${product_id}`)
     },
-    selectGenre(genreId) {
-      this.$router.push(`/games/${genreId}`)
-    }
   }
 }
 </script>

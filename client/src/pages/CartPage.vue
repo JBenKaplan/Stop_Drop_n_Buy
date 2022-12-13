@@ -6,6 +6,7 @@
           :price="product.price" :quantity="product.quantity" :productId="product._id" />
       </div>
     </div>
+
     <button @click="Checkout">Checkout</button>
   </div>
 </template>
@@ -28,8 +29,10 @@ export default {
   methods: {
     async getCart() {
       let res = await Client.get(`/carts/6393611b08906d51c5716e85`)
-      console.log(res.data.cart.products)
       this.cart = res.data.cart.products
+    },
+    async Checkout() {
+      return
     }
   }
 }

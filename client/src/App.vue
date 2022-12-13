@@ -11,12 +11,13 @@
 
 <script>
 import NavBar from './components/NavBar.vue'
-import { CheckSession } from './services/Auth'
+import { CheckSession, SignInUser } from './services/Auth'
 
 export default {
   name: 'App',
   data: () => ({
-    user: null
+    user: null,
+    token: null,
   }),
   components: {
     NavBar
@@ -26,8 +27,11 @@ export default {
   },
   methods: {
     async CheckToken() {
-      let user = await CheckSession()
-      this.user = user
+      let token = await CheckSession()
+      this.token = token
+      if (!token) {
+        this.user = await SignInUser()
+      }
     },
     async handleLogOut() {
       this.user = null

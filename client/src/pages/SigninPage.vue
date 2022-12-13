@@ -18,11 +18,11 @@
 
 <script>
 import { SignInUser } from '@/services/Auth'
-// import axios from 'axios'
 
 export default {
   name: 'SigninPage',
   data: () => ({
+    user: {},
     email: '',
     password: '',
   }),
@@ -36,7 +36,11 @@ export default {
       e.preventDefault()
       let email = this.email
       let password = this.password
-      await SignInUser({ email, password })
+      const payload = await SignInUser({ email, password })
+      this.user = payload
+      console.log("user", payload)
+      // this.$emit(payload)
+      // emit payload to App.vue
       this.$router.push('/')
     },
   }

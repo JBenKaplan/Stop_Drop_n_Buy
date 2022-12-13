@@ -1,4 +1,4 @@
-const { User } = require('../models')
+const { User, Cart } = require('../models')
 const middleware = require('../middleware')
 
 const SignIn = async (req, res) => {
@@ -33,9 +33,9 @@ const CheckSession = async (req, res) => {
 const Register = async (req, res) => {
   try {
     const { username, email, password } = req.body
-    console.log(req.body)
     let passwordDigest = await middleware.hashPassword(password)
-    const user = new User({ username, email, passwordDigest })
+    let cart_id = new Cart()
+    const user = new User({ username, email, passwordDigest, cart_id })
     await user.save()
     return res.status(201).json({ user })
   } catch (error) {
