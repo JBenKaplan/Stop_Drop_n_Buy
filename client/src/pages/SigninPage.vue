@@ -2,9 +2,9 @@
   <div class="signin">
     <form @submit="signInUser" class="formInfo">
       <h3 class="signin-text">Sign In</h3>
-      <input :value="email" @input="event => email = event.target.value" required class="signin-input"
-        placeholder="email" name="email" />
-      <input :value="password" @input="event => password = event.target.value" required class="signin-input"
+      <input :value="email" @input="event => email = event.target.value" required class="form-input" placeholder="email"
+        name="email" />
+      <input :value="password" @input="event => password = event.target.value" required class="form-input"
         placeholder="password" name="password" type="password" />
       <button>
         Sign In

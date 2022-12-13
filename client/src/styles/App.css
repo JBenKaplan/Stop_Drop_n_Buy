@@ -51,7 +51,7 @@ nav {
   border-radius: 10px;
   margin: 10px 10px;
   padding: 10px;
-  height: 30vh;
+  height: 300px;
   width: 25vw;
   background: rgba(143, 143, 143, 0.589);
 }
@@ -76,12 +76,32 @@ nav {
   height: 70vh;
 }
 button {
+  width: 80px;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: rgb(144, 190, 255);
   border-radius: 20px;
 }
 
 img {
   border-radius: 10px;
+}
+
+/* Forms style */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-input {
+  height: 30px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.formInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30vw;
 }

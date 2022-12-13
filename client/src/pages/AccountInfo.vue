@@ -1,18 +1,17 @@
 <template>
-  <div>
-    <p>test</p>
+  <div class="form-container">
     <form @submit="UpdateUser" class="formInfo">
       <h3 class="update-text">Update Info</h3>
-      <input :value="username" @input="event => username = event.target.value" required class="update-input"
+      <input :value="username" @input="event => username = event.target.value" required class="form-input"
         placeholder="username" name="username" />
-      <input :value="email" @input="event => email = event.target.value" required class="update-input"
-        placeholder="email" name="email" />
-      <input :value="password" @input="event => password = event.target.value" required class="update-input"
+      <input :value="email" @input="event => email = event.target.value" required class="form-input" placeholder="email"
+        name="email" />
+      <input :value="password" @input="event => password = event.target.value" required class="form-input"
         placeholder="password" name="password" type="password" />
-      <input :value="confirmPassword" @input="event => confirmPassword = event.target.value" required
-        class="update-input" placeholder="confirmPassword" name="confirmPassword" type="password" />
+      <input :value="confirmPassword" @input="event => confirmPassword = event.target.value" required class="form-input"
+        placeholder="confirmPassword" name="confirmPassword" type="password" />
       <button>
-        Sign In
+        Update
       </button>
     </form>
   </div>
@@ -25,7 +24,11 @@ import { CheckSession } from '@/services/Auth'
 export default {
   name: 'AccountInfo',
   data: () => ({
-    user: null
+    user: null,
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
   }),
   mounted() {
     this.CheckToken()
@@ -36,7 +39,7 @@ export default {
       this.user = user
     },
     async UpdateUser() {
-
+      // UPDATE USER INFO
     }
   }
 }
