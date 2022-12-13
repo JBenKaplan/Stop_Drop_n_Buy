@@ -26,8 +26,8 @@ const SignIn = async (req, res) => {
 }
 
 const CheckSession = async (req, res) => {
-  const { token } = res.locals
-  res.send(token)
+  const payload = res.locals
+  res.send(payload)
 }
 
 const Register = async (req, res) => {

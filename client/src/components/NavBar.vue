@@ -4,8 +4,13 @@
         class="navitem" /></router-link>
     <router-link to="/products" class="navitem">Products</router-link>
     <div v-if="user">
-      <div @click="handleLogOut">
-        <p>Logout</p>
+      <div class="userInfo">
+        <div @click="handleLogOut">
+          <div class="navitem logout">Logout</div>
+        </div>
+        <router-link to="/account">
+          <img src="../assets/user.png" alt="user" class="userIcon" />
+        </router-link>
       </div>
     </div>
     <div v-else>
@@ -27,4 +32,3 @@ export default {
   }
 }
 </script>
-
