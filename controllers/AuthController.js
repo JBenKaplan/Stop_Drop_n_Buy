@@ -10,9 +10,10 @@ const Login = async (req, res) => {
 
 const Register = async (req, res) => {
   try {
-    const { name, username, password, email } = req.body
+    const { username, email, password } = req.body
+    console.log(req.body)
     let passwordDigest = await middleware.hashPassword(password)
-    const user = new User({ name, username, passwordDigest, email })
+    const user = new User({ username, email, passwordDigest })
     await user.save()
     return res.status(201).json({ user })
   } catch (error) {

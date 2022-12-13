@@ -24,7 +24,7 @@ import { RegisterUser } from '../services/Auth'
 
 
 export default {
-  name: 'CartPage',
+  name: 'RegisterPage',
   data: () => ({
     username: '',
     email: '',
@@ -32,14 +32,14 @@ export default {
     confirmPassword: ''
   }),
   components: {
-
-  },
-  mounted() {
   },
   methods: {
     async registerUser(e) {
       e.preventDefault()
-      await RegisterUser(this.username, this.email, this.password)
+      let username = this.username
+      let email = this.email
+      let password = this.password
+      await RegisterUser({ username, email, password })
     },
     handleChange(e) {
       this.target.value = e.target.value
