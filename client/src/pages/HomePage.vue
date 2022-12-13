@@ -26,8 +26,7 @@ export default {
     searched: false
   }),
   mounted() {
-    this.getProducts(),
-      this.CheckSession()
+    this.getProducts()
   },
   components: {
     ProductCard
