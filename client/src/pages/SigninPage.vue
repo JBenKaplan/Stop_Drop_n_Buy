@@ -1,16 +1,18 @@
 <template>
-  <div class="signin">
-    <form @submit="signInUser" class="formInfo">
-      <h3 class="signin-text">Sign In</h3>
-      <input :value="email" @input="event => email = event.target.value" required class="form-input" placeholder="email"
-        name="email" />
-      <input :value="password" @input="event => password = event.target.value" required class="form-input"
-        placeholder="password" name="password" type="password" />
-      <button>
-        Sign In
-      </button>
-    </form>
-    <RouterLink to="/register">Register</RouterLink>
+  <div class="container">
+    <div class="form-container">
+      <form @submit="signInUser" class="formInfo">
+        <h3 class="form-input">Sign In</h3>
+        <input :value="email" @input="event => email = event.target.value" required class="form-input"
+          placeholder="email" name="email" />
+        <input :value="password" @input="event => password = event.target.value" required class="form-input"
+          placeholder="password" name="password" type="password" />
+        <button>
+          Sign In
+        </button>
+      </form>
+      <RouterLink to="/register">Register</RouterLink>
+    </div>
   </div>
 </template>
 
@@ -35,6 +37,7 @@ export default {
       let email = this.email
       let password = this.password
       await SignInUser({ email, password })
+      this.$router.push('/')
     },
   }
 }

@@ -89,10 +89,19 @@ img {
 }
 
 /* Forms style */
+.container {
+  display: flex;
+  justify-content: center;
+}
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background-color: rgba(128, 128, 128, 0.551);
+  border-radius: 10px;
+  width: 350px;
+  height: 350px;
 }
 .form-input {
   height: 30px;
@@ -103,5 +112,5 @@ img {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 30vw;
+  width: 300px;
 }

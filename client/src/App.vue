@@ -32,6 +32,7 @@ export default {
     async handleLogOut() {
       this.user = null
       localStorage.clear()
+      this.$router.push('/signin')
     },
   }
 }

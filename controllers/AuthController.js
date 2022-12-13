@@ -45,21 +45,18 @@ const Register = async (req, res) => {
 
 const UpdateUser = async (req, res) => {
   try {
-    // console.log(req.body)
-    const { name, email, newPassword, password, userId } = req.body
+    console.log(req.body)
+    const { username, email, password, newPassword } = req.body
     //confirm password
-    const user = await User.findById(userId)
+    const user = await User.findOne({ where: { email } })
     if (
       user &&
-      (await middleware.comparePassword(
-        user.dataValues.passwordDigest,
-        password
-      ))
+      (await middleware.comparePassword(user.passwordDigest, password))
     ) {
       // if password is confirmed, set update body
       let updateBody = {}
-      if (name) {
-        updateBody.name = name
+      if (username) {
+        updateBody.username = username
       }
       if (email) {
         updateBody.email = email
@@ -69,9 +66,9 @@ const UpdateUser = async (req, res) => {
         updateBody.passwordDigest = passwordDigest
       }
       //send the update request
-      let updateConfirm = await User.update(updateBody, {
-        where: { id: userId },
-        returning: true
+      let updateConfirm = await User.findOneAndUpdate({
+        where: { email },
+        updateBody
       })
       console.log(updateConfirm)
       return res.send(updateConfirm)
@@ -87,11 +84,11 @@ const UpdateUser = async (req, res) => {
 
 const DeleteUser = async (req, res) => {
   try {
-    let userId = parseInt(req.params.user_id)
-    let user = await User.findOne({ where: { id: userId } })
+    let email = parseInt(req.params.email)
+    let user = await User.findOne({ where: { email } })
     await user.remove()
     res.send({
-      message: `Deletion Confirmed: User: ${userId}`
+      message: `Deletion Confirmed: User: ${email}`
     })
   } catch (error) {
     throw error
