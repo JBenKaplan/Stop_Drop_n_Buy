@@ -1,0 +1,10 @@
+2022-12-13 08:36:18.490 [info] Starting worker process with pid 8673 (type: fileWatcher, window: 1).
+2022-12-13 08:36:39.182 [info] Worker process with pid 8673 terminated normally (type: fileWatcher, window: 1).
+2022-12-13 08:36:39.683 [info] Starting worker process with pid 8693 (type: fileWatcher, window: 1).
+2022-12-13 08:36:54.862 [info] Worker process with pid 8693 terminated normally (type: fileWatcher, window: 1).
+2022-12-13 08:36:55.393 [info] Starting worker process with pid 8730 (type: fileWatcher, window: 1).
+2022-12-13 08:37:02.825 [info] Worker process with pid 8730 terminated normally (type: fileWatcher, window: 1).
+2022-12-13 08:39:20.716 [info] Extensions removed from another source codereviewer14.cyber77-vscode vscode-userdata:/Users/benkaplan/.vscode/extensions/extensions.json
+2022-12-13 08:39:30.497 [info] Extensions removed from another source robbowen.synthwave-vscode vscode-userdata:/Users/benkaplan/.vscode/extensions/extensions.json
+2022-12-13 08:40:21.297 [info] Extensions added from another source codereviewer14.cyber77-vscode vscode-userdata:/Users/benkaplan/.vscode/extensions/extensions.json
+2022-12-13 08:40:48.372 [info] Extensions added from another source robbowen.synthwave-vscode vscode-userdata:/Users/benkaplan/.vscode/extensions/extensions.json

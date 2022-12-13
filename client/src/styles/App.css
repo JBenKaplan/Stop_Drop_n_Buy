@@ -1,3 +1,7 @@
+/* App */
+#app {
+  background-image: '../assets/granite-background.jpeg';
+}
 /* Nav bar */
 nav {
   display: flex;

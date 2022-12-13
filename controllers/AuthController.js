@@ -47,7 +47,7 @@ const UpdateUser = async (req, res) => {
   try {
     const { username, email, password, newPassword } = req.body
     //confirm password
-    const user = await User.findOne({ where: { username } })
+    const user = await User.findOne({ where: { email } })
     if (
       user &&
       (await middleware.comparePassword(user.passwordDigest, password))
@@ -65,11 +65,11 @@ const UpdateUser = async (req, res) => {
         updateBody.passwordDigest = passwordDigest
       }
       //send the update request
-      let updateConfirm = await User.findOneAndUpdate({
-        where: { username },
+      let updateConfirm = await User.findOneAndUpdate(
+        { where: { email } },
         updateBody
-      })
-      console.log(updateConfirm)
+      )
+      console.log('user', updateConfirm)
       return res.send(updateConfirm)
     }
     console.log('C')

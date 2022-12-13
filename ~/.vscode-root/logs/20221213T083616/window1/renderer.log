@@ -1,0 +1,20 @@
+2022-12-13 08:36:20.474 [error] [Extension Host] (node:8670) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `Code Helper --trace-deprecation ...` to show where the warning was created)
+2022-12-13 08:36:20.671 [info] [perf] Render performance baseline is 16ms
+2022-12-13 08:36:31.856 [error] Panel not active, make sure the pets view is visible before running this command.: Error: Panel not active, make sure the pets view is visible before running this command.
+    at PetWebviewViewProvider.getWebview (/Users/benkaplan/.vscode/extensions/tonybaloney.vscode-pets-1.20.0/out/extension/extension.js:682:19)
+    at PetWebviewViewProvider._update (/Users/benkaplan/.vscode/extensions/tonybaloney.vscode-pets-1.20.0/out/extension/extension.js:524:30)
+    at PetWebviewViewProvider.update (/Users/benkaplan/.vscode/extensions/tonybaloney.vscode-pets-1.20.0/out/extension/extension.js:678:14)
+    at /Users/benkaplan/.vscode/extensions/tonybaloney.vscode-pets-1.20.0/out/extension/extension.js:392:23
+    at d.invoke (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:63:145)
+    at w.deliver (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:63:2029)
+    at g.fire (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:63:1667)
+    at s.$acceptConfigurationChanged (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:105:23866)
+    at /Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:105:23350
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-12-13 08:36:41.603 [error] [Extension Host] (node:8694) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `Code Helper (Plugin) --trace-deprecation ...` to show where the warning was created)
+2022-12-13 08:36:42.179 [info] [perf] Render performance baseline is 16ms
+2022-12-13 08:36:57.169 [error] [Extension Host] (node:8729) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `Code Helper (Plugin) --trace-deprecation ...` to show where the warning was created)
+2022-12-13 08:36:57.861 [info] [perf] Render performance baseline is 24ms

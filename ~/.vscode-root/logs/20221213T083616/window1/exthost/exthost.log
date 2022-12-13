@@ -1,0 +1,95 @@
+2022-12-13 08:36:18.723 [info] Extension host with pid 8670 started
+2022-12-13 08:36:18.776 [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+2022-12-13 08:36:18.777 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2022-12-13 08:36:18.777 [info] ExtensionService#_doActivateExtension albert.TabOut, startup: true, activationEvent: '*'
+2022-12-13 08:36:18.777 [info] ExtensionService#_doActivateExtension CodeReviewer14.cyber77-vscode, startup: true, activationEvent: '*'
+2022-12-13 08:36:18.777 [info] ExtensionService#_doActivateExtension GitHub.codespaces, startup: true, activationEvent: '*'
+2022-12-13 08:36:18.777 [info] ExtensionService#_doActivateExtension oderwat.indent-rainbow, startup: true, activationEvent: '*'
+2022-12-13 08:36:18.777 [info] ExtensionService#_doActivateExtension Shan.code-settings-sync, startup: true, activationEvent: '*'
+2022-12-13 08:36:19.080 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2022-12-13 08:36:19.080 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2022-12-13 08:36:19.164 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'api', root cause: GitHub.codespaces
+2022-12-13 08:36:20.148 [info] Eager extensions activated
+2022-12-13 08:36:20.150 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:20.150 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:20.150 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:20.150 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onStartupFinished', root cause: esbenp.prettier-vscode
+2022-12-13 08:36:20.150 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-containers, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:20.150 [info] ExtensionService#_doActivateExtension ms-vsliveshare.vsliveshare, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:20.150 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:20.150 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:20.150 [info] ExtensionService#_doActivateExtension tonybaloney.vscode-pets, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:20.510 [warning] DiagnosticCollection with name 'devcontainer' does already exist.
+2022-12-13 08:36:20.515 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:31.749 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2022-12-13 08:36:31.750 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2022-12-13 08:36:31.750 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2022-12-13 08:36:31.824 [error] Error: Panel not active, make sure the pets view is visible before running this command.
+    at PetWebviewViewProvider.getWebview (/Users/benkaplan/.vscode/extensions/tonybaloney.vscode-pets-1.20.0/out/extension/extension.js:682:19)
+    at PetWebviewViewProvider._update (/Users/benkaplan/.vscode/extensions/tonybaloney.vscode-pets-1.20.0/out/extension/extension.js:524:30)
+    at PetWebviewViewProvider.update (/Users/benkaplan/.vscode/extensions/tonybaloney.vscode-pets-1.20.0/out/extension/extension.js:678:14)
+    at /Users/benkaplan/.vscode/extensions/tonybaloney.vscode-pets-1.20.0/out/extension/extension.js:392:23
+    at d.invoke (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:63:145)
+    at w.deliver (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:63:2029)
+    at g.fire (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:63:1667)
+    at s.$acceptConfigurationChanged (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:105:23866)
+    at /Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:105:23350
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-12-13 08:36:39.168 [info] Extension host terminating: received terminate message from renderer
+2022-12-13 08:36:39.230 [info] Extension host with pid 8670 exiting with code 0
+2022-12-13 08:36:40.079 [info] Extension host with pid 8694 started
+2022-12-13 08:36:40.079 [info] Skipping acquiring lock for /Users/benkaplan/ga_seir/projects/Stop_Drop_Buy/~/.vscode-root/User/workspaceStorage/62be95283ada7b7f33060bd5bc10a1da.
+2022-12-13 08:36:40.208 [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+2022-12-13 08:36:40.239 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2022-12-13 08:36:40.252 [info] ExtensionService#_doActivateExtension GitHub.codespaces, startup: true, activationEvent: '*'
+2022-12-13 08:36:40.424 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2022-12-13 08:36:40.490 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2022-12-13 08:36:40.506 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'api', root cause: GitHub.codespaces
+2022-12-13 08:36:41.295 [info] Eager extensions activated
+2022-12-13 08:36:41.296 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:41.298 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:41.306 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:41.327 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:41.375 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-containers, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:41.412 [info] ExtensionService#_doActivateExtension ms-vsliveshare.vsliveshare, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:41.603 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:41.659 [warning] DiagnosticCollection with name 'devcontainer' does already exist.
+2022-12-13 08:36:42.925 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2022-12-13 08:36:42.992 [info] ExtensionService#_doActivateExtension albert.TabOut, startup: false, activationEvent: '*'
+2022-12-13 08:36:42.995 [info] ExtensionService#_doActivateExtension CodeReviewer14.cyber77-vscode, startup: false, activationEvent: '*'
+2022-12-13 08:36:42.999 [info] ExtensionService#_doActivateExtension oderwat.indent-rainbow, startup: false, activationEvent: '*'
+2022-12-13 08:36:43.000 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:43.006 [info] ExtensionService#_doActivateExtension Shan.code-settings-sync, startup: false, activationEvent: '*'
+2022-12-13 08:36:43.050 [info] ExtensionService#_doActivateExtension tonybaloney.vscode-pets, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:46.407 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:javascript'
+2022-12-13 08:36:46.438 [info] ExtensionService#_doActivateExtension Vue.volar, startup: false, activationEvent: 'onLanguage:javascript'
+2022-12-13 08:36:54.838 [info] Extension host terminating: renderer closed the MessagePort
+2022-12-13 08:36:54.854 [info] Extension host with pid 8694 exiting with code 0
+2022-12-13 08:36:55.542 [info] Extension host with pid 8729 started
+2022-12-13 08:36:55.542 [info] Skipping acquiring lock for /Users/benkaplan/ga_seir/projects/Stop_Drop_Buy/~/.vscode-root/User/workspaceStorage/62be95283ada7b7f33060bd5bc10a1da.
+2022-12-13 08:36:55.614 [info] ExtensionService#_doActivateExtension Vue.volar, startup: false, activationEvent: 'onLanguage:plaintext'
+2022-12-13 08:36:55.650 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:javascript'
+2022-12-13 08:36:55.683 [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+2022-12-13 08:36:55.699 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2022-12-13 08:36:55.701 [info] ExtensionService#_doActivateExtension albert.TabOut, startup: true, activationEvent: '*'
+2022-12-13 08:36:55.705 [info] ExtensionService#_doActivateExtension CodeReviewer14.cyber77-vscode, startup: true, activationEvent: '*'
+2022-12-13 08:36:55.711 [info] ExtensionService#_doActivateExtension GitHub.codespaces, startup: true, activationEvent: '*'
+2022-12-13 08:36:55.768 [info] ExtensionService#_doActivateExtension oderwat.indent-rainbow, startup: true, activationEvent: '*'
+2022-12-13 08:36:55.770 [info] ExtensionService#_doActivateExtension Shan.code-settings-sync, startup: true, activationEvent: '*'
+2022-12-13 08:36:55.796 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2022-12-13 08:36:55.916 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2022-12-13 08:36:55.931 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2022-12-13 08:36:55.962 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'api', root cause: GitHub.codespaces
+2022-12-13 08:36:56.986 [info] Eager extensions activated
+2022-12-13 08:36:56.986 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:56.988 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:56.991 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:56.999 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:57.028 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-containers, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:57.044 [info] ExtensionService#_doActivateExtension ms-vsliveshare.vsliveshare, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:57.171 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:57.175 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:57.181 [info] ExtensionService#_doActivateExtension tonybaloney.vscode-pets, startup: false, activationEvent: 'onStartupFinished'
+2022-12-13 08:36:57.230 [warning] DiagnosticCollection with name 'devcontainer' does already exist.
+2022-12-13 08:37:02.798 [info] Extension host terminating: renderer closed the MessagePort
+2022-12-13 08:37:02.845 [info] Extension host with pid 8729 exiting with code 0

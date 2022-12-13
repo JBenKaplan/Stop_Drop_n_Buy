@@ -12,7 +12,7 @@
 </template>
 
 <script>
-// import axios from 'axios';
+import Client from '@/services/api';
 
 export default {
   name: 'CarCard',
@@ -20,7 +20,7 @@ export default {
   methods: {
     async removeFromCart(cart_id, product_id) {
       console.log(cart_id, product_id);
-      // await axios.delete(`http://localhost:3001/products/cart/:cart_id/:product_id`)
+      await Client.delete(`/products/cart/:cart_id/:product_id`)
     }
   }
 }

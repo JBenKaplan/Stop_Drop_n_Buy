@@ -1,0 +1,13 @@
+2022-12-13 08:36:17.177 [info] update#setState idle
+2022-12-13 08:36:18.038 [info] Starting extension host with pid 8670 (fork() took 1 ms).
+2022-12-13 08:36:39.242 [info] Extension host with pid 8670 exited with code: 0, signal: null.
+2022-12-13 08:36:39.686 [info] UtilityProcess<2>: Creating new...
+2022-12-13 08:36:39.688 [info] UtilityProcess<2>: received spawn event.
+2022-12-13 08:36:47.082 [info] update#setState checking for updates
+2022-12-13 08:36:47.805 [info] update#setState idle
+2022-12-13 08:36:54.855 [info] UtilityProcess<2>: received exit event with code 0.
+2022-12-13 08:36:54.855 [info] Extension host with pid 8694 exited with code: 0, signal: .
+2022-12-13 08:36:55.241 [info] UtilityProcess<3>: Creating new...
+2022-12-13 08:36:55.271 [info] UtilityProcess<3>: received spawn event.
+2022-12-13 08:37:02.864 [info] UtilityProcess<3>: received exit event with code 0.
+2022-12-13 08:37:02.879 [info] Extension host with pid 8729 exited with code: 0, signal: .
