@@ -6,6 +6,7 @@
           :price="product.price" :quantity="product.quantity" :productId="product._id" />
       </div>
     </div>
+    <button @click="Checkout">Checkout</button>
   </div>
 </template>
 
