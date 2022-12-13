@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1> Stop Drop n' Buy</h1>
     <div class="products" v-if="!searched">
       <h2>Top Products</h2>
       <section class="container-grid">
@@ -30,6 +31,9 @@ export default {
   },
   components: {
     ProductCard
+  },
+  props: {
+    user: Object
   },
   methods: {
     async getProducts() {

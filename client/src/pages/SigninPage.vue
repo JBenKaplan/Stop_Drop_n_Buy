@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     <div class="form-container">
-      <form @submit="signInUser" class="formInfo">
+      <form @submit="SignInInfo" class="formInfo">
         <h3 class="form-input">Sign In</h3>
         <input :value="email" @input="event => email = event.target.value" required class="form-input"
           placeholder="email" name="email" />
         <input :value="password" @input="event => password = event.target.value" required class="form-input"
           placeholder="password" name="password" type="password" />
-        <button>
+        <button :disabled="email || password">
           Sign In
         </button>
       </form>
@@ -17,31 +17,18 @@
 </template>
 
 <script>
-import { SignInUser } from '@/services/Auth'
-
 export default {
   name: 'SigninPage',
-  data: () => ({
-    user: {},
-    email: '',
-    password: '',
-  }),
-  components: {
-
-  },
-  mounted() {
-  },
+  emits: ['SetUser', 'email', 'password'],
   methods: {
-    async signInUser(e) {
-      e.preventDefault()
-      let email = this.email
-      let password = this.password
-      const payload = await SignInUser({ email, password })
-      this.user = payload
-      console.log("user", payload)
-      // this.$emit(payload)
-      // emit payload to App.vue
+    SignInInfo() {
+      this.$emit('SetUser', this.email, this.password)
       this.$router.push('/')
+
+      // let email = this.email
+      // let password = this.password
+      // const userInfo = await SignInUser({ email, password })
+      // this.user = userInfo
     },
   }
 }

@@ -39,6 +39,7 @@ export default {
   methods: {
     async DeleteUser() {
       await DeleteAccount()
+      this.$route.push('/signin')
     },
     async CheckToken() {
       let user = await CheckSession()
