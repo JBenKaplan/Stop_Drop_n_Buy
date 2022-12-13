@@ -40,7 +40,8 @@ nav {
 .inputBox {
   border-radius: 20px;
 }
-.productsPage {
+.productsPage,
+.cart {
   display: flex;
   margin: 0 auto;
   width: 90vw;
@@ -113,4 +114,9 @@ img {
   justify-content: center;
   flex-direction: column;
   width: 300px;
+}
+
+/* Cart page */
+.cart {
+  display: flex;
 }

@@ -34,6 +34,7 @@ export default {
       let res = await axios.put(`http://localhost:3001/products/cart/6393611b08906d51c5716e85/${this.$route.params.product_id}`)
       console.log(res.data.product)
       this.product = res.data.product
+      this.$router.push('/cart')
     },
   }
 }

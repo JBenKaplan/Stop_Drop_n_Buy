@@ -10,8 +10,7 @@
 </template>
 
 <script>
-import axios from "axios"
-// import Client from '@/services/api'
+import Client from '@/services/api'
 import CartCard from '@/components/CartCard.vue'
 
 export default {
@@ -27,7 +26,7 @@ export default {
   },
   methods: {
     async getCart() {
-      let res = await axios.get(`http://localhost:3001/carts/6393611b08906d51c5716e85`)
+      let res = await Client.get(`/carts/6393611b08906d51c5716e85`)
       console.log(res.data.cart.products)
       this.cart = res.data.cart.products
     }

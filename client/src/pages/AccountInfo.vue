@@ -53,6 +53,7 @@ export default {
       await UpdateAccount({ username, email, password, newPassword })
       this.user = null
       localStorage.clear()
+      this.$router.push('/signin')
     }
   }
 }
