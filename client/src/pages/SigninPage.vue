@@ -1,9 +1,9 @@
 <template>
   <div class="signin">
-    <form @submit="signinUser">
+    <form @submit="signInUser">
       <h3 class="signin-text">Sign In</h3>
-      <input :value="username" @input="event => username = event.target.value" required class="signin-input"
-        placeholder="username" name="username" />
+      <input :value="email" @input="event => email = event.target.value" required class="signin-input"
+        placeholder="email" name="email" />
       <input :value="password" @input="event => password = event.target.value" required class="signin-input"
         placeholder="password" name="password" type="password" />
       <button>
@@ -15,12 +15,13 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { SignInUser } from '@/services/Auth'
+// import axios from 'axios'
 
 export default {
-  name: 'CartPage',
+  name: 'SigninPage',
   data: () => ({
-    username: '',
+    email: '',
     password: '',
   }),
   components: {
@@ -29,12 +30,11 @@ export default {
   mounted() {
   },
   methods: {
-    async getCart() {
-      let res = await axios.get(`http://localhost:3001/carts/6393611b08906d51c5716e85`)
-      return res
-    },
-    handleChange(e) {
-      this.target.value = e.target.value
+    async signInUser(e) {
+      e.preventDefault()
+      let email = this.email
+      let password = this.password
+      await SignInUser({ email, password })
     },
   }
 }
