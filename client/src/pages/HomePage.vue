@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import axios from 'axios'
 import ProductCard from '../components/ProductCard.vue'
+import Client from '@/services/api'
 
 export default {
   name: 'HomePage',
@@ -26,14 +26,15 @@ export default {
     searched: false
   }),
   mounted() {
-    this.getProducts()
+    this.getProducts(),
+      this.CheckSession()
   },
   components: {
     ProductCard
   },
   methods: {
     async getProducts() {
-      let res = await axios.get(`http://localhost:3001/products/all`)
+      let res = await Client.get(`/products/all`)
       console.log(res.data.products)
       this.products = res.data.products
     },

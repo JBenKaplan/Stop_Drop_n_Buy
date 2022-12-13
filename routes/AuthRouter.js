@@ -16,7 +16,12 @@ router.get(
 router.post('/signin', controller.SignIn)
 router.post('/register', controller.Register)
 
-router.put('/update', controller.UpdateUser)
+router.put(
+  '/update',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.UpdateUser
+)
 
 router.delete(
   '/:user_id',

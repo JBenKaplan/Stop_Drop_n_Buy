@@ -89,7 +89,7 @@ const DeleteUser = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_id)
     let user = await User.findOne({ where: { id: userId } })
-    await user.destroy()
+    await user.remove()
     res.send({
       message: `Deletion Confirmed: User: ${userId}`
     })

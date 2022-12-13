@@ -7,14 +7,11 @@
     <router-link to="/cart" class="navitem">
       <img src="../assets/shopping-cart--v1.png" alt="cart" />
     </router-link>
-    <!-- <div className="dropdown-panel {{panelDisplay}}" class="cart-dropdown">
-      </div> -->
   </nav>
 </template>
 
 <script>
-// let cart = false
-// import { useVuex } from '@vueblock/vue-use-vuex'
+
 
 export default {
   name: 'NavBar',

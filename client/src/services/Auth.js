@@ -19,6 +19,6 @@ export const RegisterUser = async (data) => {
 
 export const CheckSession = async () => {
   // Checks if the current token if it exists is valid
-  const res = await Client.get('/users/session')
+  const res = await Client.get('/auth/session')
   return res.data
 }
