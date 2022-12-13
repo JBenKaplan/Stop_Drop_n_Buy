@@ -1,6 +1,6 @@
 <template>
   <div class="signin">
-    <form @submit="registerUser">
+    <form @submit="registerUser" class="formInfo">
       <h3 class="signin-text">Register</h3>
       <input :value="username" @input="event => username = event.target.value" required class="signin-input"
         placeholder="username" name="username" />

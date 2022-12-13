@@ -5,6 +5,7 @@ import ProductInfo from './pages/ProductInfo'
 import CartPage from './pages/CartPage'
 import SigninPage from './pages/SigninPage'
 import RegisterPage from './pages/RegisterPage'
+import AccountInfo from './pages/AccountInfo'
 
 const routes = [
   { path: '/', component: HomePage, name: 'Homepage' },
@@ -16,7 +17,8 @@ const routes = [
   },
   { path: '/cart', component: CartPage, name: 'CartPage' },
   { path: '/signin', component: SigninPage, name: 'SigninPage' },
-  { path: '/register', component: RegisterPage, name: 'RegisterPage' }
+  { path: '/register', component: RegisterPage, name: 'RegisterPage' },
+  { path: '/account', component: AccountInfo, name: 'AccountInfo' }
 ]
 
 const router = createRouter({

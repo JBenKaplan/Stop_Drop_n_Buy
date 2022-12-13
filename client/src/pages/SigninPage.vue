@@ -1,6 +1,6 @@
 <template>
   <div class="signin">
-    <form @submit="signInUser">
+    <form @submit="signInUser" class="formInfo">
       <h3 class="signin-text">Sign In</h3>
       <input :value="email" @input="event => email = event.target.value" required class="signin-input"
         placeholder="email" name="email" />
