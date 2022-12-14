@@ -17,17 +17,14 @@
           <ProductCard @click="selectProduct(product._id)" :image="product.icon" :background="product.splash"
             :details="product.description" :price="product.price" :quantity="product.quantity" />
         </div>
-        <h3>{{ product.name }}</h3>
         <div class="product-details">
+          <h3>{{ product.name }}</h3>
           <p class="productItem">
             ${{ product.price }}
           </p>
-          <p class="productItem">
-            {{ product.quantity }} in stock
-          </p>
-          <div class="add-to-cart">
-            <button>Add to Cart</button>
-          </div>
+        </div>
+        <div class="add-to-cart">
+          <button>Add to Cart</button>
         </div>
       </div>
     </div>
@@ -35,7 +32,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import Client from '@/services/api'
 import ProductCard from '@/components/ProductCard.vue'
 
 export default {
@@ -54,12 +51,16 @@ export default {
   },
   methods: {
     async getProducts() {
-      let res = await axios.get(`http://localhost:3001/products/all`)
+      let res = await Client.get(`/products/all`)
       this.products = res.data.products
     },
     selectProduct(productId) {
       this.$router.push(`/products/${productId}`)
-    }
+    },
+    async addProductToCart() {
+      await Client.put(`/products/cart/6393611b08906d51c5716e85/${this.$route.params.product_id}`)
+      this.$router.push('/cart')
+    },
   }
 }
 </script>

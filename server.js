@@ -21,6 +21,7 @@ app.use('/users', user)
 app.use('/auth', auth)
 app.use('/carts', cart)
 app.use('/products', product)
+app.use(express.static(`${__dirname}/client/build`))
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 

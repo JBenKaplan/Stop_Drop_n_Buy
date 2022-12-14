@@ -1,6 +1,8 @@
 <template>
   <nav>
-    <h1 class="nav-banner"> Stop Drop n' Buy</h1>
+    <div class="nav-banner">
+      <h1> Stop Drop n' Buy</h1>
+    </div>
     <div class="message">
       <p v-if="user">Welcome, {{ user.username }}</p>
     </div>
@@ -9,8 +11,8 @@
       <router-link to="/products" class="navitem">Products</router-link>
       <div v-if="user">
         <div class="userInfo">
-          <div @click="handleLogOut">
-            <div class="navitem logout">Logout</div>
+          <div @click="handleLogOut" class="logout">
+            <div class="navitem">Logout</div>
           </div>
           <router-link to="/account" class="userIcon">
             Account
@@ -21,10 +23,10 @@
       <div v-else>
         <router-link to="/signin" class="navitem">Signin</router-link>
       </div>
+      <router-link to="/cart" class="navitem">
+        <img src="../assets/shopping-cart--v1.png" alt="cart" />
+      </router-link>
     </div>
-    <router-link to="/cart" class="navitem">
-      <img src="../assets/shopping-cart--v1.png" alt="cart" />
-    </router-link>
   </nav>
 </template>
 

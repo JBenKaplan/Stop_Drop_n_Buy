@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <header>
-      <NavBar :user="this.user" :handleLogOut="handleLogOut" />
-    </header>
+    <NavBar :user="this.user" :handleLogOut="handleLogOut" />
     <main>
       <RouterView :user="this.user" :email="email" :password="password" @handleFormChange="handleFormChange"
         @handleSubmit="handleSubmit" />
