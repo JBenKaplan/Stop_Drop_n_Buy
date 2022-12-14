@@ -1,24 +1,26 @@
 <template>
   <nav>
-    <h1> Stop Drop n' Buy</h1>
+    <h1 class="nav-banner"> Stop Drop n' Buy</h1>
     <div class="message">
       <p v-if="user">Welcome, {{ user.username }}</p>
     </div>
-    <router-link to="/" class="navitem"><img src="../assets/home-page--v1.png" alt="home"
-        class="navitem" /></router-link>
-    <router-link to="/products" class="navitem">Products</router-link>
-    <div v-if="user">
-      <div class="userInfo">
-        <div @click="handleLogOut">
-          <div class="navitem logout">Logout</div>
+    <div class="nav-choices">
+      <router-link to="/" class="navitem"><img src="../assets/home-page--v1.png" alt="home" /></router-link>
+      <router-link to="/products" class="navitem">Products</router-link>
+      <div v-if="user">
+        <div class="userInfo">
+          <div @click="handleLogOut">
+            <div class="navitem logout">Logout</div>
+          </div>
+          <router-link to="/account" class="userIcon">
+            Account
+            <!-- <img src="../assets/user.png" alt="user" class="userIcon" /> -->
+          </router-link>
         </div>
-        <router-link to="/account">
-          <img src="../assets/user.png" alt="user" class="userIcon" />
-        </router-link>
       </div>
-    </div>
-    <div v-else>
-      <router-link to="/signin" class="navitem">Signin</router-link>
+      <div v-else>
+        <router-link to="/signin" class="navitem">Signin</router-link>
+      </div>
     </div>
     <router-link to="/cart" class="navitem">
       <img src="../assets/shopping-cart--v1.png" alt="cart" />
