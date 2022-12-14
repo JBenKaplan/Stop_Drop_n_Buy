@@ -1,15 +1,6 @@
 <template>
   <div class="container">
     <div class="form-container">
-      <!-- <form @submit="handleSubmit" class="formInfo">
-        <h3 class="form-input">Sign In</h3>
-        <input :value="email" @input="handleChange" required class="form-input" placeholder="email" name="email" />
-        <input :value="password" @input="handleChange" required class="form-input" placeholder="password"
-          name="password" type="password" />
-        <button>
-          Sign In
-        </button>
-      </form> -->
       <form v-on:submit="handleSubmit" class="formInfo">
         <h3 class="form-input">Sign In</h3>
         <input @input="handleChange" placeholder="Email" :value="email" name="email" type="email" class="form-input" />

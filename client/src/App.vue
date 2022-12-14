@@ -4,30 +4,23 @@
       <NavBar :user="this.user" :handleLogOut="handleLogOut" />
     </header>
     <main>
-      <!-- <SigninPage :email="email" :password="password" @handleFormChange="handleFormChange"
-        @handleSubmit="handleSubmit" /> -->
       <RouterView :email="email" :password="password" @handleFormChange="handleFormChange"
         @handleSubmit="handleSubmit" />
-      <!-- <form @submit="handleSubmit">
-          <input placeholder="Email" :value="email" name="email" type="email" v-on:input="handleFormChange" />
-          <input placeholder="Password" :value="password" name="password" type="password" @input="handleFormChange" />
-          <button>Log In</button>
-        </form> -->
     </main>
   </div>
 </template>
 
 <script>
-// import Client from './services/api'
+
 import NavBar from './components/NavBar.vue'
-// import SigninPage from './pages/SigninPage.vue'
+
 import { CheckSession, SignInUser } from './services/Auth'
 
 export default {
   name: 'App',
   components: {
     NavBar,
-    // SigninPage
+
   },
   data: () => ({
     user: '',
