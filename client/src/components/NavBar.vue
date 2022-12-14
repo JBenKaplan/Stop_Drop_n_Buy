@@ -1,5 +1,8 @@
 <template>
   <nav>
+    <div class="message">
+      <p v-if="user">Welcome, {{ user.username }}</p>
+    </div>
     <router-link to="/" class="navitem"><img src="../assets/home-page--v1.png" alt="home"
         class="navitem" /></router-link>
     <router-link to="/products" class="navitem">Products</router-link>

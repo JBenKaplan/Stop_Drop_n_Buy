@@ -76,15 +76,25 @@ nav {
   flex-direction: column;
 }
 .backsplash {
-  width: 80vw;
   border-radius: 20px;
-  height: 70vh;
+  height: 40vh;
+  max-height: 40vh;
+}
+.product-data {
+  display: flex;
+  width: 30vw;
+  flex-direction: column;
+  background-color: rgba(128, 128, 128, 0.806);
+  border-radius: 10px;
+}
+.productItem {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
 }
 button {
   width: 80px;
-  display: flex;
   align-items: center;
-  justify-content: center;
   background-color: rgb(144, 190, 255);
   border-radius: 20px;
 }

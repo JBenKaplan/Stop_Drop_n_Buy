@@ -3,9 +3,17 @@
     <header>
       <NavBar :user="this.user" :handleLogOut="handleLogOut" />
     </header>
-    {{ user }}
+    User info: {{ user }}
     <main>
-      <RouterView :email="email" :password="password" @SetUser="SetUser" />
+      <!-- <SigninPage :email="email" :password="password" @handleFormChange="handleFormChange"
+        @handleSubmit="handleSubmit" /> -->
+      <RouterView :email="email" :password="password" @handleFormChange="handleFormChange"
+        @handleSubmit="handleSubmit" />
+      <!-- <form @submit="handleSubmit">
+          <input placeholder="Email" :value="email" name="email" type="email" v-on:input="handleFormChange" />
+          <input placeholder="Password" :value="password" name="password" type="password" @input="handleFormChange" />
+          <button>Log In</button>
+        </form> -->
     </main>
   </div>
 </template>
@@ -13,36 +21,40 @@
 <script>
 // import Client from './services/api'
 import NavBar from './components/NavBar.vue'
+// import SigninPage from './pages/SigninPage.vue'
 import { CheckSession, SignInUser } from './services/Auth'
 
 export default {
   name: 'App',
+  components: {
+    NavBar,
+    // SigninPage
+  },
   data: () => ({
-    user: null,
+    user: '',
     email: '',
     password: ''
   }),
-  components: {
-    NavBar,
-  },
   mounted() {
     this.CheckToken()
-    // this.SetUser(this.email, this.password)
   },
   methods: {
     async CheckToken() {
-      let token = await CheckSession()
-      return token
+      let payload = await CheckSession()
+      this.user = payload
+      console.log(payload);
     },
-    async SetUser(email, password) {
-      this.email = email
-      this.password = password
-      const user = await SignInUser({ email, password })
-      // const userInfo = await Client.get(`/users/${user._id}`)
-      // console.log(userInfo)
-      this.user = user
+    handleFormChange(name, value) {
+      this[name] = value
     },
-    async handleLogOut() {
+    async handleSubmit() {
+      const payload = await SignInUser({ email: this.email, password: this.password })
+      this.user = payload
+      this.$route.push('/products')
+      this.email = ''
+      this.password = ''
+    },
+    handleLogOut() {
       this.user = null
       localStorage.clear()
       this.$router.push('/signin')

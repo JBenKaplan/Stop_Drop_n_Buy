@@ -1,24 +1,26 @@
 <template>
   <div class="productInfo">
     <div>
-      <img :src=product.splash alt="backsplash" class="backsplash" />
+      <img :src="product.splash" alt="backsplash" class="backsplash" />
     </div>
-    <p class="productItem">
-      {{ product.name }}
-    </p>
-    <p class="productItem">
-      ${{ product.price }}
-    </p>
-    <p class="productItem">
-      {{ product.quantity }} in stock
-    </p>
-    <button class="add-to-cart">+<img src="../assets/shopping-cart--v1.png" alt="cart" class="navitem"
-        @click="addProductToCart" /></button>
+    <div class="product-data">
+      <h2 class="productItem">
+        {{ product.name }}
+      </h2>
+      <h3 class="productItem">
+        ${{ product.price }}
+      </h3>
+      <h3 class="productItem">
+        {{ product.quantity }} in stock
+      </h3>
+      <button class="productItem">+<img src="../assets/shopping-cart--v1.png" alt="cart" class="navitem"
+          @click="addProductToCart" /></button>
+    </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
+import Client from '@/services/api'
 
 export default {
   name: 'ProductInfo',
@@ -26,14 +28,17 @@ export default {
     product: {},
   }),
   mounted() {
+    this.getProduct()
   },
   components: {
   },
   methods: {
-    async addProductToCart() {
-      let res = await axios.put(`http://localhost:3001/products/cart/6393611b08906d51c5716e85/${this.$route.params.product_id}`)
-      console.log(res.data.product)
+    async getProduct() {
+      let res = await Client.get(`/products/${this.$route.params.product_id}`)
       this.product = res.data.product
+    },
+    async addProductToCart() {
+      await Client.put(`/products/cart/6393611b08906d51c5716e85/${this.$route.params.product_id}`)
       this.$router.push('/cart')
     },
   }
