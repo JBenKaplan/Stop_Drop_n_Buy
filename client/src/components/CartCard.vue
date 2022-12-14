@@ -1,13 +1,16 @@
 <template>
-  <div class="card">
-    <div class="image-wrapper">
-      <img :src="image" alt="product-image" class="product-image" />
+  <div class="cart-card">
+    <div class="cart-image-wrapper">
+      <img :src="image" alt="product-image" class="cart-product-image" />
     </div>
-    <div class="info-wrapper flex-col">
-      <h2 class="product-name">{{ name }}</h2>
+    <div class="cart-info-wrapper flex-col">
+      <h2 class="cart-product-name">{{ name }}</h2>
+      {{ details }}
     </div>
-    <p>${{ price }}</p>
-    <button @click="removeFromCart(productId)" value="productId">Remove</button>
+    <div class="product-right-wrapper">
+      <p>${{ price }}</p>
+      <button @click="removeFromCart(productId)" value="productId">Remove</button>
+    </div>
   </div>
 </template>
 

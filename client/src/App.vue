@@ -4,7 +4,7 @@
       <NavBar :user="this.user" :handleLogOut="handleLogOut" />
     </header>
     <main>
-      <RouterView :email="email" :password="password" @handleFormChange="handleFormChange"
+      <RouterView :user="this.user" :email="email" :password="password" @handleFormChange="handleFormChange"
         @handleSubmit="handleSubmit" />
     </main>
   </div>
