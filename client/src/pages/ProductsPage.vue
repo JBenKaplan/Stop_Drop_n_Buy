@@ -17,7 +17,7 @@
           <ProductCard @click="selectProduct(product._id)" :image="product.icon" :background="product.splash"
             :details="product.description" :price="product.price" :quantity="product.quantity" />
         </div>
-        <h2>{{ product.name }}</h2>
+        <h3>{{ product.name }}</h3>
         <div class="product-details">
           <p class="productItem">
             ${{ product.price }}
