@@ -3,7 +3,6 @@
     <header>
       <NavBar :user="this.user" :handleLogOut="handleLogOut" />
     </header>
-    User info: {{ user }}
     <main>
       <!-- <SigninPage :email="email" :password="password" @handleFormChange="handleFormChange"
         @handleSubmit="handleSubmit" /> -->
@@ -42,7 +41,6 @@ export default {
     async CheckToken() {
       let payload = await CheckSession()
       this.user = payload
-      console.log(payload);
     },
     handleFormChange(name, value) {
       this[name] = value
@@ -50,9 +48,9 @@ export default {
     async handleSubmit() {
       const payload = await SignInUser({ email: this.email, password: this.password })
       this.user = payload
-      this.$route.push('/products')
       this.email = ''
       this.password = ''
+      this.$router.push('/products')
     },
     handleLogOut() {
       this.user = null
