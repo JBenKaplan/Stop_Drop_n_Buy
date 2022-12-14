@@ -29,19 +29,6 @@ export default {
       e.preventDefault()
       this.$emit('handleSubmit')
     }
-
-    // props: { email: String, password: String },
-    // emits: ['SetUser', 'email', 'password'],
-    // methods: {
-    //   SignInInfo() {
-    //     this.$emit('SetUser', this.email, this.password)
-    //     this.$router.push('/')
-
-    //     // let email = this.email
-    //     // let password = this.password
-    //     // const userInfo = await SignInUser({ email, password })
-    //     // this.user = userInfo
-    //   },
   }
 }
 </script>
