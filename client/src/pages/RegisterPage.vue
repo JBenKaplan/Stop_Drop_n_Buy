@@ -42,7 +42,7 @@ export default {
       let email = this.email
       let password = this.password
       await RegisterUser({ username, email, password })
-      this.$route.push('/signin')
+      this.$router.push('/signin')
     },
     handleChange(e) {
       this.target.value = e.target.value

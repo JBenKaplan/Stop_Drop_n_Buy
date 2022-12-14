@@ -1,5 +1,6 @@
 <template>
   <nav>
+    <h1> Stop Drop n' Buy</h1>
     <div class="message">
       <p v-if="user">Welcome, {{ user.username }}</p>
     </div>

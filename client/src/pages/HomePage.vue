@@ -1,16 +1,13 @@
 <template>
   <div>
-    <h1> Stop Drop n' Buy</h1>
-    <div class="products" v-if="!searched">
-      <h2>Top Products</h2>
-      <section class="container-grid">
-        <div :key="product.id" v-for="product in products">
-          <div>
-            <ProductCard @click="selectProduct(product._id)" :name="product.name" :image="product.icon" />
-          </div>
+    <h2>Top Products</h2>
+    <section class="homepage-grid">
+      <div :key="product.id" v-for="product in products">
+        <div class="homepage-item">
+          <ProductCard @click="selectProduct(product._id)" :name="product.name" :image="product.icon" />
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </template>
 

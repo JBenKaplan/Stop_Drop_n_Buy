@@ -1,5 +1,5 @@
 <template>
-  <div class="search">
+  <!-- <div class="search">
     <form @submit="getSearchResults" class="search-form">
       <input :value="searchQuery" @input="handleChange" class="inputBox" />
       <button>Search</button>
@@ -9,13 +9,14 @@
       <div :key="product.id" v-for="product in searchResults">
       </div>
     </section>
-  </div>
-
+  </div> -->
   <div class="productsPage">
     <div :key="product.id" v-for="product in products" class="product-wrapper">
       <div class="productList" @click="selectProduct(product._id)">
-        <ProductCard @click="selectProduct(product._id)" :image="product.icon" :background="product.splash"
-          :details="product.description" :price="product.price" :quantity="product.quantity" />
+        <div class="products-image-wrapper">
+          <ProductCard @click="selectProduct(product._id)" :image="product.icon" :background="product.splash"
+            :details="product.description" :price="product.price" :quantity="product.quantity" />
+        </div>
         <h2>{{ product.name }}</h2>
         <div class="product-details">
           <p class="productItem">
@@ -24,7 +25,9 @@
           <p class="productItem">
             {{ product.quantity }} in stock
           </p>
-          <button>Add to Cart</button>
+          <div class="add-to-cart">
+            <button>Add to Cart</button>
+          </div>
         </div>
       </div>
     </div>
