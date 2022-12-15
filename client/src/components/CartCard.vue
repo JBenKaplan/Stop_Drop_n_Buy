@@ -22,8 +22,6 @@ export default {
   props: ["name", "image", "background", "details", "price", "quantity", "productId"],
   methods: {
     async removeFromCart(product_id) {
-      // let cart_id = this.$route.params.cart_id
-      // console.log(cart_id, product_id);
       await Client.delete(`/products/cart/6393611b08906d51c5716e85/${product_id}`)
       this.$forceUpdate()
     }

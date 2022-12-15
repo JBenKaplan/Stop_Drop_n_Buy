@@ -16,7 +16,6 @@
           </div>
           <router-link to="/account" class="userIcon">
             Account
-            <!-- <img src="../assets/user.png" alt="user" class="userIcon" /> -->
           </router-link>
         </div>
       </div>
