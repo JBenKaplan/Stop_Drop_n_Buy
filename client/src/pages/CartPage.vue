@@ -21,8 +21,9 @@ export default {
   name: 'CartPage',
   data: () => ({
     cart: [],
-    total: 0
+    total: 0,
   }),
+  props: ["user"],
   components: {
     CartCard
   },

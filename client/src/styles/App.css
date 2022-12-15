@@ -2,6 +2,15 @@
 html {
   background: url('../assets/granite-background.jpeg') no-repeat center center;
 }
+#underline {
+  text-decoration: underline;
+}
+#underline:hover {
+  cursor: pointer;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
 /* Nav bar */
 nav {
   display: flex;
@@ -38,13 +47,82 @@ nav {
 }
 /* Homepage */
 .homepage-grid {
-  border: black 2px solid;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  padding-top: 10px;
 }
 .homepage-item {
   display: flex;
+  align-items: center;
+}
+.iphone-background {
+  display: flex;
+  background-color: rgba(128, 128, 128, 0.564);
+  padding: 15px;
+  border-radius: 15px;
+}
+.iphone-info {
+  background-image: url(https://imgs.search.brave.com/U9lkxzZDfMlgGzF5hT5hPo-pIPOHkzJGZOBXZq1bLYs/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5p/cGhvbmVoYWNrcy5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjAvMDcvZGlzbWlz/cy1pbmNvbWluZy1j/YWxsLW5vdGlmaWNh/dGlvbi13aXRob3V0/LXJlamVjdGluZy5q/cGc);
+  height: 750px;
+  width: 95vw;
+  border-radius: 15px;
+}
+.iphone-details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 30px;
+  color: white;
+  padding-left: 50vw;
+  padding-top: 40vh;
+}
+.two-wide {
+  display: flex;
+  background-color: rgba(128, 128, 128, 0.564);
+  width: 99%;
+  border-radius: 20px;
+}
+.airpods-background {
+  display: flex;
+  padding: 15px;
+  border-radius: 15px;
+}
+.airpods-info {
+  background-image: url(https://imgs.search.brave.com/o7wIH4oUt-xU5jQdrpBDVuIaq9GTDNrPZl9ipMC1Mwk/rs:fit:1200:1001:1/g:ce/aHR0cDovL2FuZHlz/dHJhdmVsYmxvZy5i/b2FyZGluZ2FyZWEu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDE3LzA4L2FwcGxl/LWFpcnBvZHMtcmV2/aWV3LTMuanBn);
+  background-size: cover;
+  height: 400px;
+  width: 45vw;
+  border-radius: 15px;
+}
+.airpods-details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+  color: white;
+  padding-top: 20vh;
+}
+.apple-watch-background {
+  display: flex;
+  padding: 15px;
+  border-radius: 15px;
+}
+.apple-watch-info {
+  background-image: url(https://imgs.search.brave.com/-hX1FSHwq3Js-wTndozN8yn8JA8HKn_XVEm0MNZXMSM/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/bWFjd29ybGQuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIx/LzAzL2FwcGxlLXdh/dGNoLXNlcmllcy0z/LWV4cGxvcmVyLTEw/MDczNzU0NS1vcmln/LTQuanBnP3F1YWxp/dHk9NTAmc3RyaXA9/YWxs);
+  background-size: cover;
+  height: 400px;
+  width: 45vw;
+  border-radius: 15px;
+}
+.apple-watch-details {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  font-size: 20px;
+  color: white;
+  padding-left: 30px;
 }
 /* All Products page */
 .search {

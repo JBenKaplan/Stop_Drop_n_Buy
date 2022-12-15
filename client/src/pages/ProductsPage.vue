@@ -9,7 +9,7 @@
       <div :key="product.id" v-for="product in searchResults">
       </div>
     </section>
-  </div> -->
+  </div> -->s
   <div class="productsPage">
     <div :key="product.id" v-for="product in products" class="product-wrapper">
       <div class="productList" @click="selectProduct(product._id)">

@@ -16,8 +16,8 @@ const main = async () => {
       icon: 'https://images.unsplash.com/photo-1615281612781-4b972bd4e3fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
     },
     {
-      name: 'Apple iPhone Pro',
-      description: 'https://www.apple.com/iphone-11-pro',
+      name: 'Apple iPhone 14',
+      description: 'https://www.apple.com/iphone-14-pro',
       price: 800,
       category: 'tech',
       quantity: 10,
