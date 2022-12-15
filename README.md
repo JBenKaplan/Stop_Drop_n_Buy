@@ -4,11 +4,15 @@ E-commerce for your perusement
 
 ### By: Ben Kaplan
 
-[Github](https://github.com/JBenKaplan) | [LinkedIn](https://www.linkedin.com/in/jbenkaplan/) <br />
+[Github](https://github.com/JBenKaplan) | [LinkedIn](https://www.linkedin.com/in/jbenkaplan/) | [Trello](https://trello.com/b/OnIFmJb6/stop-drop-and-buy) <br />
 
 ### Date: 12/15/22
 
 ---
+
+![homepage](client/src/assets/homepage.png)
+![allproducts](client/src/assets/allproducts.png)
+![cart](client/src/assets/cart.png)
 
 ## Overview
 
@@ -38,8 +42,15 @@ Stop into the shop, take a look around, find some items you'd like to purchase, 
 
 ## Future Updates
 
+- [] Quantity fhange in Cart
+- [] Cart window also a dropdown window
+- [] Search functionality
+- [] Sort by category
+- [] Full transaction functionality
+
 ---
 
 ## Credits
 
-[Icon8](https://icons8.com/) - icons
+- [Icon8](https://icons8.com/) - icons
+- [Apple](https://apple.com) - Apple Product links and photos

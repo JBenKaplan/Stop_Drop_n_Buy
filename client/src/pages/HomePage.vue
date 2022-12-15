@@ -5,7 +5,7 @@
         <div class="iphone-info">
           <div class="iphone-details">
             <p>iPhone 14</p>
-            <p id="underline" @click="this.$router.push('/products/63964ee03c3db38bff4aee14')">Learn more</p>
+            <p id="underline" @click="this.$router.push('/products/639ab291343691e9c073a2f4')">Learn more</p>
           </div>
         </div>
       </div>
@@ -14,7 +14,7 @@
           <div class="airpods-info">
             <div class="airpods-details">
               <p>Airpods</p>
-              <p id="underline" @click="this.$router.push('/products/63964ee03c3db38bff4aee13')">Learn more</p>
+              <p id="underline" @click="this.$router.push('/products/639ab291343691e9c073a2f3')">Learn more</p>
             </div>
           </div>
         </div>
@@ -22,7 +22,7 @@
           <div class="apple-watch-info">
             <div class="apple-watch-details">
               <p>Apple Watch</p>
-              <p id="underline" @click="this.$router.push('/products/63964ee03c3db38bff4aee15')">Learn more</p>
+              <p id="underline" @click="this.$router.push('/products/639ab291343691e9c073a2f5')">Learn more</p>
             </div>
           </div>
         </div>
